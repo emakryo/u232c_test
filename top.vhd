@@ -8,7 +8,6 @@ use UNISIM.VComponents.ALL;
 
 entity top is
   port (MCLK1 : in std_logic;
-        RS_RX : in std_logic;
         RS_TX : out std_logic);
 end top;
 
@@ -18,7 +17,6 @@ architecture archtop of top is
   component sub_top
     port (
       clk : in std_logic;
-      rx : in std_logic;
       tx : in std_logic);
   end component;
 
@@ -34,7 +32,6 @@ begin
 
   main : sub_top port map (
     clk => clk,
-    rx => RS_RX,
     tx=> RS_TX);
   
 end archtop;

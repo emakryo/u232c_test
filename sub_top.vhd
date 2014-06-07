@@ -6,8 +6,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity sub_top is
   port (
     clk : in std_logic;
-    rx : in std_logic;
-    tx : in std_logic);
+    tx : out std_logic);
 end sub_top;
 
 architecture arch of sub_top is
